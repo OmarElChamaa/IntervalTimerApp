@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#969198"
+    tools:context=".MainActivity"
+    android:id="@+id/mainLayout"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/LayoutToBlur"
+        >
+
+
+
+        <TextView
+            android:id="@+id/roundLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginRight="56dp"
+            android:fontFamily="@font/freshmarker"
+            android:text="Round Length"
+            android:textColor="?attr/colorError"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pauseTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/roundLength"
+            android:layout_alignStart="@+id/roundLength"
+            android:layout_alignLeft="@+id/roundLength"
+            android:layout_alignEnd="@+id/roundLength"
+            android:layout_alignRight="@+id/roundLength"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/freshmarker"
+            android:text="Pause Time"
+            android:textColor="?attr/colorError"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@+id/roundLength"
+            app:layout_constraintStart_toStartOf="@+id/roundLength"
+            app:layout_constraintTop_toBottomOf="@+id/roundLength"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/repetitions"
+            android:layout_width="150dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/pauseTime"
+            android:layout_alignStart="@+id/pauseTime"
+            android:layout_alignLeft="@+id/pauseTime"
+            android:layout_alignEnd="@+id/pauseTime"
+            android:layout_alignRight="@+id/pauseTime"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/freshmarker"
+            android:text="Repetitions"
+            android:textColor="?attr/colorError"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@+id/pauseTime"
+            app:layout_constraintHorizontal_bias="0.433"
+            app:layout_constraintStart_toStartOf="@+id/pauseTime"
+            app:layout_constraintTop_toBottomOf="@+id/pauseTime"
+            tools:ignore="MissingConstraints" />
+
+
+        <Button
+            android:id="@+id/fightBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/repetitions"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginRight="76dp"
+            android:fontFamily="@font/freshmarker"
+            android:text="Fight !"
+            android:textColor="?attr/colorError"
+            android:textSize="30sp"
+            app:backgroundTint="#292828"
+            app:layout_constraintEnd_toEndOf="@+id/repetitions"
+            app:layout_constraintTop_toBottomOf="@+id/repetitions"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="75dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="92dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginRight="72dp"
+            android:background="#292828"
+            android:orientation="horizontal"
+            app:backgroundTint="#292828"
+            app:layout_constraintEnd_toStartOf="@+id/roundLength"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/edtTxtMinsRnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:inputType="number"
+                android:text="00"
+                android:textSize="25sp"
+                android:textColor="?attr/colorError"
+                tools:layout_editor_absoluteX="79dp"
+                tools:layout_editor_absoluteY="104dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:text=":"
+                android:textSize="25sp"
+                android:textColor="?attr/colorError" />
+
+            <EditText
+                android:id="@+id/edtTxtSecRds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:inputType="number"
+                android:text="00"
+                android:textSize="25sp"
+                android:textColor="?attr/colorError" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="75dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="40dp"
+            android:background="#292828"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:backgroundTint="#292828"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout1"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/edtTxtPauseMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:inputType="number"
+                android:text="00"
+                android:textColor="?attr/colorError"
+                android:textSize="25sp"
+                tools:layout_editor_absoluteX="79dp"
+                tools:layout_editor_absoluteY="104dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+
+                android:text=":"
+                android:textColor="?attr/colorError"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/edtTextPauseSec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/digital"
+                android:inputType="number"
+                android:text="00"
+                android:textColor="?attr/colorError"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/reps"
+            android:layout_width="73dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="72dp"
+            android:background="#292828"
+            android:fontFamily="@font/digital"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="0"
+            android:textColor="?attr/colorError"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/countdownTimer"
+        android:layout_width="196dp"
+        android:layout_height="368dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/round_corners"
+        android:ems="10"
+        android:fontFamily="@font/digital"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="0"
+        android:textColor="?attr/colorError"
+        android:textSize="90sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"
+        android:id="@+id/layout2"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/fightTimeLayout"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:id="@+id/fightTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/digital"
+                android:gravity="center"
+                android:text="00:00"
+                android:inputType="number"
+                android:textColor="?attr/colorError"
+                android:textSize="100sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pauseScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/digital"
+            android:gravity="center"
+            android:text="Pause Time:"
+            android:textColor="?attr/colorError"
+            android:textSize="50sp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
